@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class ="container">
+    <div class="py-5 text-center">
+    <h2>첨부파일 및 이미지 조회</h2>
+</div>
+    첨부파일: <a th:if="${Ftem.attachFile}" th:href="|/attach/${Ftem.Fd}|"
+            th:text="${Ftem.getAttachFile().getUploadFileName()}"/><br/>
+    <img th:each="imageFile : ${Ftem.imageFiles}" th:src="|/image/${imageFile.getStoreFileName()}|"
+         width = "300" height="300">
+</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<div class="header" th:fragment="bodyHeader">
+  <ul class="nav nav-pills pull-right">
+    <li><a class="login_brand" href="/">Home </a></li>
+
+    <li>
+      <a class="login_brand" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+      <a class="login_brand" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+    </li>
+  </ul>
+
+</div>

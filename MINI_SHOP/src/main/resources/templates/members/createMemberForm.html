@@ -1,0 +1,334 @@
+<!--<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<style>
+ .fieldError {
+ border-color: #bd2130;
+ }
+</style>
+<body>
+<div class="container">
+
+	<div th:replace="fragments/body1Header :: bodyHeader" />
+	<form role="form" action="/members/new" th:object="${memberForm}" method="post">
+		<div th:replace="form_errors :: formErrorsFragment"></div>
+		<div class="mb-3">
+			<label for="username" class="form-label">사용자ID</label>
+			<input type="text" th:field="*{username}" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label for="password1" class="form-label">비밀번호</label>
+			<input type="password" th:field="*{password1}" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label for="password2" class="form-label">비밀번호 확인</label>
+			<input type="password" th:field="*{password2}" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label for="email" class="form-label">이메일</label>
+			<input type="email" th:field="*{email}" class="form-control">
+		</div>-->
+		<!---------------------------->
+		<!---------------------------->
+		<!---------------------------->
+<!--		<div class="mb-3">-->
+<!--			<label for="name" class="form-label">이름</label>-->
+<!--			<input type="text" th:field="*{name}" class="form-control" placeholder="이름을 입력하세요">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="city" class="form-label">도시</label>-->
+<!--			<input type="text" th:field="*{city}" class="form-control"-->
+<!--			       placeholder="도시를 입력하세요">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="street" class="form-label">거리</label>-->
+<!--			<input type="text" th:field="*{street}" class="form-control"-->
+<!--			       placeholder="거리를 입력하세요">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="zipcode" class="form-label">우편번호</label>-->
+<!--			<input type="text" th:field="*{zipcode}" class="form-control"-->
+<!--			       placeholder="우편번호를 입력하세요">-->
+<!--		</div>-->
+		<!--<button type="submit" class="btn btn-primary">회원가입</button>
+	</form>
+	<br/>
+	<div th:replace="fragments/footer :: footer" />
+</div> &lt;!&ndash; /container &ndash;&gt;
+</body>
+</html>
+-->
+
+
+
+
+<!--<!DOCTYPE HTML>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head th:replace="fragments/header :: header" />-->
+
+<!--<head>-->
+<!--	<meta charset="utf-8" />-->
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />-->
+<!--	<meta name="description" content="" />-->
+<!--	<meta name="author" content="" />-->
+<!--	<title>Shop Homepage - Start Bootstrap Template</title>-->
+<!--	&lt;!&ndash; Favicon&ndash;&gt;-->
+
+<!--	&lt;!&ndash; Bootstrap icons&ndash;&gt;-->
+<!--	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />-->
+<!--	&lt;!&ndash; Core theme CSS (includes Bootstrap)&ndash;&gt;-->
+<!--	<link href="css/styles.css" rel="stylesheet" />-->
+<!--</head>-->
+<!--<style>-->
+<!-- .fieldError {-->
+<!-- border-color: #bd2130;-->
+<!-- }-->
+<!--</style>-->
+<!--<body>-->
+<!--<div class="container">-->
+
+<!--	<div th:replace="fragments/body1Header :: bodyHeader" />-->
+<!--	<form role="form" action="/members/new" th:object="${memberForm}" method="post">-->
+<!--		<div th:replace="form_errors :: formErrorsFragment"></div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="username" class="form-label">사용자ID</label>-->
+<!--			<input type="text" th:field="*{username}" class="form-control">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="password1" class="form-label">비밀번호</label>-->
+<!--			<input type="password" th:field="*{password1}" class="form-control">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="password2" class="form-label">비밀번호 확인</label>-->
+<!--			<input type="password" th:field="*{password2}" class="form-control">-->
+<!--		</div>-->
+<!--		<div class="mb-3">-->
+<!--			<label for="email" class="form-label">이메일</label>-->
+<!--			<input type="email" th:field="*{email}" class="form-control">-->
+<!--		</div>-->
+		<!---------------------------->
+		<!---------------------------->
+		<!---------------------------->
+		<!--		<div class="mb-3">-->
+		<!--			<label for="name" class="form-label">이름</label>-->
+		<!--			<input type="text" th:field="*{name}" class="form-control" placeholder="이름을 입력하세요">-->
+		<!--		</div>-->
+		<!--		<div class="mb-3">-->
+		<!--			<label for="city" class="form-label">도시</label>-->
+		<!--			<input type="text" th:field="*{city}" class="form-control"-->
+		<!--			       placeholder="도시를 입력하세요">-->
+		<!--		</div>-->
+		<!--		<div class="mb-3">-->
+		<!--			<label for="street" class="form-label">거리</label>-->
+		<!--			<input type="text" th:field="*{street}" class="form-control"-->
+		<!--			       placeholder="거리를 입력하세요">-->
+		<!--		</div>-->
+		<!--		<div class="mb-3">-->
+		<!--			<label for="zipcode" class="form-label">우편번호</label>-->
+		<!--			<input type="text" th:field="*{zipcode}" class="form-control"-->
+		<!--			       placeholder="우편번호를 입력하세요">-->
+		<!--		</div>-->
+	<!--	<button type="submit" class="btn btn-primary">회원가입</button>
+	</form>
+	<br/>
+	<div th:replace="fragments/footer :: footer" />
+</div> &lt;!&ndash; /container &ndash;&gt;
+</body>
+</html>-->
+
+
+
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Shop Homepage - Start Bootstrap Template</title>
+	<!-- Favicon-->
+
+	<!-- Bootstrap icons-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+
+
+<style>
+		 .fieldError {
+		 border-color: #bd2130;
+ 		}
+        /* @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css'); */
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+
+        body{
+           margin:0 auto;
+        }
+        /* body, table, div, p ,span{font-family:'Nanum Gothic';} */
+        body, table, div, p ,span{font-family:'Noto Sans KR';}
+
+        a{
+            text-decoration: none;
+            color:#333;
+        }
+        #con{
+            width:100%;
+            height: 100vh;
+            background-color:#f5f1ee;
+            background-image:url("/images/logo.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            padding:0;
+        }
+        #login{
+            width:600px;
+            height: 600px;
+            margin:0 auto;
+            /* position: relative; */
+            /* background:#ddd; */
+        }
+        #login_form{
+            /* text-align:center; */
+            border-radius: 10px;
+            padding:30px 50px;
+            background: #fff;
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .login{
+            font-size:25px;
+            font-weight: 900;
+            color:#333;
+        }
+
+        .size{
+            width:300px;
+            height:30px;
+            padding-left:10px;
+            background-color: #f4f4f4;
+            /* margin-left:10px; */
+            border:none;
+            border-radius: 5px;
+        }
+
+        .btn{
+            width:310px;
+            height: 40px;
+            font-size:15px;
+            background-color: #df3278;
+            color:#fff;
+            border:none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            background:#ca296a;
+        }
+        hr{
+            margin-top:20px;
+            background:#eee;
+
+        }
+        .find{
+            color:#ddd;
+            font-size:12px;
+        }
+        .find span{
+            padding-left:10px;
+        }
+        .find span::before{
+            content:' ';
+            color:#333;
+            padding-right: 10px;
+        }
+        .find span:nth-child(1):before{
+            content:none;
+        }
+
+        .find span:nth-child(1){
+            padding-left:0px;
+        }
+
+        .find a:hover{
+            color:#707070;
+        }
+        .num1{
+            width:60px;
+            text-align: left;
+        }
+        .num2{
+            width:235px;
+        }
+
+    </style>
+
+<body>
+<div id="con">
+	<div id="login">
+		<div id="login_form"><!--로그인 폼-->
+			<form role="form" action="/members/new" th:object="${memberForm}" method="post">
+				<h3 class="login" style="letter-spacing:-1px;">계정 만들기</h3>
+
+				<!-- <p>
+                    <input type="submit" value="Sign in with Google" class="btn" style="background-color:#217Af0">
+                </p> 구글로 로그인-->
+
+				<hr>
+
+				<div th:replace="form_errors :: formErrorsFragment"></div>
+
+				<!-- <span>ID</span> -->
+				<p style="text-align: left; font-size:12px; color:#666">username</p>
+				<input type="text" th:field="*{username}" placeholder="아이디" class="size">
+				<p></p>
+				</label><!--아이디-->
+
+				<label>
+					<!-- <span>PW</span> -->
+					<p style="text-align: left; font-size:12px; color:#666">Password </p>
+					<input type="password" th:field="*{password1}" placeholder="비밀번호" class="size">
+				</label><!--비밀번호-->
+
+				<label>
+					<!-- <span>PW</span> -->
+					<p style="text-align: left; font-size:12px; color:#666"> </p>
+					<input type="password" th:field="*{password2}" placeholder="비밀번호 확인" class="size">
+				</label><!--비밀번호 확인-->
+
+				<label>
+					<!-- <span>PW</span> -->
+					<p style="text-align: left; font-size:12px; color:#666">E-mail</p>
+					<input type="email"  th:field="*{email}" placeholder="이메일" class="size">
+				</label> <!--이메일-->
+
+				<br>
+				<p>
+					<input type="submit" value="Create Acoout" class="btn">
+
+				</p>
+			</form>
+
+			<hr>
+			<p class="find">
+				<span><a class="login_brand" sec:authorize="isAnonymous()" th:href="@{/user/login}" >login</a></span>
+				<span>  <a class="login_brand" href="/">Home </a></span>
+			</p>
+		</div>
+		<div>
+		</div><!--con-->
+	</div>
+</div>
+
+</body>
+
+</html>
+

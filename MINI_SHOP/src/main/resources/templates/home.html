@@ -1,0 +1,337 @@
+<!--<!DOCTYPE HTML>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="fragments/header :: header">-->
+<!--	<title>Hello</title>-->
+<!--	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--	<a class="btn btn-lg btn-dark" href="index.html">index</a>-->
+<!--	<div th:replace="fragments/bodyHeader :: bodyHeader" />-->
+<!--	<div class="jumbotron">-->
+
+<!--		<h1>HELLO SHOP</h1>-->
+<!--		<p class="lead">회원 기능</p>-->
+<!--		<p>-->
+<!--			<a class="btn btn-lg btn-secondary" href="/members/new">회원 가입</a>-->
+<!--			<a class="btn btn-lg btn-secondary" href="/members">회원 목록</a>-->
+<!--		</p>-->
+<!--		<p class="lead">상품 기능</p>-->
+<!--		<p>-->
+<!--			<a class="btn btn-lg btn-dark" href="/items/new">상품 등록</a>-->
+<!--			<a class="btn btn-lg btn-dark" href="/items">상품 목록</a>-->
+<!--		</p>-->
+<!--		<p class="lead">주문 기능</p>-->
+<!--		<p>-->
+<!--			<a class="btn btn-lg btn-info" href="/order">상품 주문</a>-->
+<!--			<a class="btn btn-lg btn-info" href="/orders">주문 내역</a>-->
+<!--		</p>-->
+
+<!--	</div>-->
+<!--	-->
+<!--	<div th:replace="fragments/footer :: footer" />-->
+<!--</div> &lt;!&ndash; /container &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<!-- 1.해더 -> 검색 탐험하다(explore) 통계(stats) 리소스(resources) 창조하다(create).
+
+2.바디
+-1 랭크(1~10등 --등수,이미지,이름,가격--순서로 출력하기.)
+-2 카테고리
+_art,_music,_tradingCards,_collecibles 등등 총 9개(3*3 형태) -->
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Shop Homepage - Start Bootstrap Template</title>
+	<!-- Favicon-->
+
+	<!-- Bootstrap icons-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container px-4 px-lg-5">
+		<a class="navbar-brand" href="#!">NFT WORLD</a>
+
+		<!-- 로그인,로그아웃 -->
+		<div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+
+
+		<!--        버튼          -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="falsse"
+				aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 ms-lg-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+					   data-bs-toggle="dropdown" aria-expanded="false">회원</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/members/new">회원 가입</a>
+
+
+<!--						<li><a class="dropdown-item" href="#!">All NFTs</a></li>-->
+<!--						<li><a class="dropdown-item" href="#!">Art</a></li>-->
+<!--						<li><a class="dropdown-item" href="#!">Music</a></li>-->
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+					   data-bs-toggle="dropdown" aria-expanded="false">상품</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/items/new">상품 등록</a>
+						<a class="dropdown-item" href="/items">상품 목록</a>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+					   data-bs-toggle="dropdown" aria-expanded="false">주문</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/order">상품 주문</a>
+						<a class="dropdown-item" href="/orders">주문 내역</a>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</nav>
+
+
+
+<!-- Header-->
+<header class="bg-dark py-5">
+	<div class="container px-4 px-lg-5 my-5">
+		<div class="text-center text-white">
+			<h1 class="display-4 fw-bolder">Explore,collect,and sell NFTs</h1>
+			<p class="lead fw-normal text-white-50 mb-0">try to business With NFT</p>
+		</div>
+	</div>
+</header>
+<!--추천 nft==================================================-->
+<!-- 추천 nft 보여주기(슬라이더를 이용해서 여러가지 컨테이너들을 이동시킨다.) -->
+
+<div class="container px-4 px-lg-5 my-5">
+	<div class="text-center text-black display-4 fw-bolder"> recommended nfts
+	</div>
+</div>
+<div style="overflow: hidden;">
+	<div class="slideContainer">
+		<div class="inner">
+			<img width="450" height="300" src="/images/nft.jpg">
+		</div>
+		<div class="inner">
+			<img width="450" height="300" src="/images/nft1.jpg">
+		</div>
+		<div class="inner">
+			<img width="450" height="300" src="/images/nft2.jpg">
+		</div>
+	</div>
+</div>
+
+<button class="butten1">1</button>
+<button class="butten2">2</button>
+<button class="butten3">3</button>
+<!--===================================================-->
+<script>
+        // translate: translate(-100vw)
+        document.querySelector('.butten1').addEventListener('click', function () {
+            document.querySelector('.slideContainer').style.transform = 'translate(0vw)';
+        })
+
+        document.querySelector('.butten2').addEventListener('click', function () {
+            document.querySelector('.slideContainer').style.transform = 'translate(-100vw)';
+        })
+
+        document.querySelector('.butten3').addEventListener('click', function () {
+            document.querySelector('.slideContainer').style.transform = 'translate(-200vw)';
+        })
+</script>
+
+
+
+
+
+<!-- 랭크구현 -->
+
+
+
+<!-- 카테고리 -->
+<div class="container px-4 px-lg-5 my-5">
+	<div class="text-center text-black display-4 fw-bolder"> browse by category</div>
+</div>
+<section class="py-1">
+	<div class="container px-4 px-lg-5 mt-1">
+		<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/art.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Art</h5>
+							<!-- Product price-->
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/music.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Music</h5>
+
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/trading-cards.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Trading Cards</h5>
+							<!-- Product price-->
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top"  width="450" height="175" src="/images/collectibles.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Collectibles</h5>
+
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/photography-category.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">PhotoGraphy</h5>
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/utility.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Utility</h5>
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/domain.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">DomainNames</h5>
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+					</div>
+				</div>
+			</div>
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- Product image-->
+					<img class="card-img-top" width="450" height="175" src="/images/sports.jpg">
+					<!-- Product details-->
+					<div class="card-body p-5">
+						<div class="text-center">
+							<!-- Product name-->
+							<h5 class="fw-bolder">Sports</h5>
+
+						</div>
+					</div>
+					<!-- Product actions-->
+					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<!-- Footer-->
+<footer class="py-5 bg-dark ">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+	</div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
